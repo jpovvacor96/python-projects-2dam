@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <template id="api_data_view" name="API Data View">
+          <t t-name="api-products.api_data_view">
+            <div>
+              <h1>Precios de mercado de productos ganaderos</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Nombre del producto</th>
+                          <th>Precio</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <t t-foreach="data" t-as="record">
+                          <tr>
+                              <td><t t-esc="record.name"/></td>
+                              <td><t t-esc="record.cost"/></td>
+                          </tr>
+                      </t>
+                  </tbody>
+              </table>
+            </div>
+          </t>
+        </template>
+    </data>
+</odoo>
